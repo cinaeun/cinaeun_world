@@ -3,6 +3,6 @@ class Article < ActiveRecord::Base
 	belongs_to :category
 	
 	# scopes
-	scope :alphabetical, -> { order('name') }
+	scope :alphabetical, -> { order('title') }
 	scope :active, -> { where(active: true) }
 end
