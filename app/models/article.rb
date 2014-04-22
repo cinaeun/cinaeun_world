@@ -4,5 +4,5 @@ class Article < ActiveRecord::Base
 	
 	# scopes
 	scope :alphabetical, -> { order('name') }
-	scope :active, where('active = ?', true)
+	scope :active, -> { where(active: true) }
 end
